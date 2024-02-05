@@ -2,8 +2,8 @@
 const Rotsi = require('rotsiapi');
 
 // Set your API credentials
-const username = 'bluezee';
-const secretKey = '30b241e1e9459417bee84681d159d181';
+const username = 'your_username';
+const secretKey = 'your_secret_key';
 
 // Set additional options if needed
 const credentials = {
