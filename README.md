@@ -14,7 +14,7 @@ $ npm i rotsiapi
 
 ## Usage
 
-The package needs to be configured with your app username and secret_key, which you can get from the [dashboard](https://rotsi-api-ui.vercel.app/).
+The package needs to be configured with your app username and secret_key, which you can get from the [dashboard](https://dashboard.rotsi.co.ke/)
 
 
 ```javascript
