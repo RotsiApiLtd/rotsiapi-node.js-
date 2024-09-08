@@ -1,8 +1,15 @@
-# ROTSI API Node.js SDK
+<a href="https://www.rotsi.co.ke/">
+  <img src="https://avatars.githubusercontent.com/u/157684324?s=200&v=4" alt="Rotsi API Ltd." align="right">
+</a>
 
-[![NPM](./images/rotsi.png)](https://www.npmjs.com/package/rotsiapi)
+# ROTSI API &middot; Node.js SDK
+[![Inline docs](https://inch-ci.org/github/dwyl/hapi-auth-jwt2.svg?branch=master)](https://github.com/RotsiApiLtd/rotsiapi-node.js-#readme)
+[![NPM](https://img.shields.io/npm/v/rotsiapi?logo=npm&color=red)](https://www.npmjs.com/package/rotsiapi)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg)](http://makeapullrequest.com)
+[![Activity](https://img.shields.io/badge/status-active-brightgreen)](https://github.com/RotsiApiLtd/rotsiapi-node.js-/commits/main/)
+> The official Node.js SDK for the ROTSI API.
 
-> The wrapper provides convenient access to the ROTSI API from applications written for Node.js.
+A wrapper that provides convenient access to the ROTSI API for applications written in [Node.js](https://nodejs.org/en)
 
 ## Install
 
@@ -14,22 +21,24 @@ $ npm i rotsiapi
 
 ## Usage
 
-The package needs to be configured with your app username and secret_key, which you can get from the [dashboard](https://dashboard.rotsi.co.ke/)
+The package needs to be configured with your app `username` and `secret_key`, which you can get from the [dashboard](https://dashboard.rotsi.co.ke/)
 
 
 ```javascript
-// Import the npm package
+// Import the npm package.
 const Rotsi = require('rotsiapi'); 
 
 const username = 'xxxxxxxx';
 const secretKey = 'xxxxxxxxxxxxxxxxxxxxxxx';
 
-// Set additional options if needed
+// Include additional options if needed.
 const credentials = {
-    secretKey: username,
-    username: secretKey,
+    secretKey: secretKey,
+    username: username,
 };
+
 const rotsiInstance = Rotsi(credentials);
+
 const stkParams = {
     amount: 1,
     phone: '254711222333', 
@@ -45,21 +54,24 @@ rotsiInstance.STK.initiateSTK(stkParams)
 
 ## Initialization
 
-Initialize the SDK as a requirement by doing `require('rotsiapi')(credentials)`. After initialization, you can get instances of offered services as follows:
+Initialize the SDK as a requirement by defining `require('rotsiapi')(credentials)`.  
+After initialization, you can get instances of offered services as follows:
 
-- [SMS Service](#stk) : `Rotsi.STK`
+- [SMS Service](https://github.com/RotsiApiLtd/rotsiapi-node.js-/blob/main/lib/bulksms.js) : `Rotsi.BULKSMS`
 
-- [KRA REMIT TAX Service](#airtime) : `Rotsi.KRA`
+- [STK Service](https://github.com/RotsiApiLtd/rotsiapi-node.js-/blob/main/lib/stk.js) : `Rotsi.STK`
 
-- [B2C Service](#mobiledata) : `Rotsi.B2C`
+- [KRA REMIT TAX Service](https://github.com/RotsiApiLtd/rotsiapi-node.js-/blob/main/lib/kra.js) : `Rotsi.KRA`
 
-- [SINGLE INVOICE Service](#voice) : `Rotsi.SINGLEINVOICE`
+- [B2C Service](https://github.com/RotsiApiLtd/rotsiapi-node.js-/blob/main/lib/b2c.js) : `Rotsi.B2C`
 
-- [BUYGOODS Service](#token) : `Rotsi.BUYGOODS`
+- [SINGLE INVOICE Service](https://github.com/RotsiApiLtd/rotsiapi-node.js-/blob/main/lib/singleinvoice.js) : `Rotsi.SINGLEINVOICE`
 
-- [PAYBILL Service](#application) : `Rotsi.PAYBILL`
+- [BUYGOODS Service](https://github.com/RotsiApiLtd/rotsiapi-node.js-/blob/main/lib/buygoods.js) : `Rotsi.BUYGOODS`
 
-- [CANCEL SINGLE INVOICE Service](#application) : `Rotsi.CANCELSINGLEINVOICE`
+- [PAYBILL Service](https://github.com/RotsiApiLtd/rotsiapi-node.js-/blob/main/lib/paybill.js) : `Rotsi.PAYBILL`
+
+- [CANCEL SINGLE INVOICE Service](https://github.com/RotsiApiLtd/rotsiapi-node.js-/blob/main/lib/cancelsingleinvoice.js) : `Rotsi.CANCELSINGLEINVOICE`
 
 ## Development
 
